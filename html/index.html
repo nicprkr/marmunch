@@ -18,8 +18,16 @@ function preload() {
 
     game.load.image('sky', '../assets/sky.png');
     game.load.image('ground', '../assets/platform.png');
+    game.load.image('s-ground', '../assets/short.png');
+    game.load.image('m-ground', '../assets/medium.png');
+    game.load.image('l-ground', '../assets/long.png');
+    game.load.image('tree', '../assets/tree.png');
     game.load.image('star', '../assets/star.png');
-    game.load.image('berry', '../assets/berry.gif');
+    game.load.image('grassyhill', '../assets/grassyhill.png');
+    game.load.image('sun', '../assets/sun2.png');
+    game.load.image('waterfall', '../assets/waterfall.png');
+    game.load.image('mountains', '../assets/mountains.png');
+    game.load.image('mountain', '../assets/mountain.png');
     game.load.spritesheet('dude', '../assets/dude.png', 92, 48, 7);
 
 }
@@ -29,9 +37,11 @@ var platforms;
 var cursors;
 
 var stars;
-var berry;
+var background;
 var score = 0;
 var scoreText;
+
+var trees;
 
 function create() {
 
@@ -42,6 +52,23 @@ function create() {
         game.add.sprite(0, 0, 'sky');
     game.world.setBounds(0, 0, 4200, 600);
 
+    
+    background = game.add.group();
+    background.create(60,60,'sun');
+    background.create(210,330,'waterfall');
+    background.create(-210,120,'mountain');
+    background.create(400,120,'mountain');
+    background.fixedToCamera = true;
+    
+    
+    game.add.sprite(0,480,'grassyhill');
+        trees = game.add.group();
+    for (var i = 0; i < 42; i++)
+    {
+        //  Create a star inside of the 'stars' group
+        var tree = trees.create(i * Math.floor((Math.random() * 300)+1), 400, 'tree');
+    }
+    
     //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = game.add.group();
 
@@ -49,40 +76,40 @@ function create() {
     platforms.enableBody = true;
 
     // Here we create the ground.
-    var ground = platforms.create(0, game.world.height - 12, 'ground');
+    var ground = platforms.create(0, game.world.height - 26, 'l-ground');
 
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
-    ground.scale.setTo(2, 2);
+    ground.scale.setTo(0.6, 0.6);
 
     //  This stops it from falling away when you jump on it
     ground.body.immovable = true;
 
     //  Now let's create two ledges
-    var ledge = platforms.create(400, 400, 'ground');
+    var ledge = platforms.create(400, 400, 's-ground');
     ledge.body.immovable = true;
 
-    ledge = platforms.create(-150, 150, 'ground');
+    ledge = platforms.create(-150, 150, 's-ground');
     ledge.body.immovable = true;
     
-    ledge = platforms.create(850, 588, 'ground');
+    ledge = platforms.create(850, 588, 'm-ground');
     ledge.body.immovable = true;
     
-        ledge = platforms.create(1250, 400, 'ground');
+        ledge = platforms.create(1250, 400, 'l-ground');
     ledge.body.immovable = true;
     
-    ledge = platforms.create(1650, 588, 'ground');
+    ledge = platforms.create(1650, 588, 'm-ground');
     ledge.body.immovable = true;
     
-        ledge = platforms.create(2150, 388, 'ground');
+        ledge = platforms.create(2150, 388, 'm-ground');
     ledge.body.immovable = true;
     
-    ledge = platforms.create(2550, 288, 'ground');
+    ledge = platforms.create(2550, 288, 'l-ground');
     ledge.body.immovable = true;
 
-        ledge = platforms.create(2950, 138, 'ground');
+        ledge = platforms.create(2950, 138, 'm-ground');
     ledge.body.immovable = true;
     
-            ledge = platforms.create(3550, 588, 'ground');
+            ledge = platforms.create(3550, 588, 'm-ground');
     ledge.body.immovable = true;
     // The player and its settings
     player = game.add.sprite(92, game.world.height - 150, 'dude');
