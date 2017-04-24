@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            
+            @font-face {
+                font-family: RobotoP;
+                src: url(Fonts/Roboto-Regular.ttf);
+            }
+            
+            #threeEs{
+                background-image: url(Codes/div1.svg);
+                height:100vh;
+                width: 100vw;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            #location{
+                background-image: url(Codes/location.svg);
+                height: 15vh;
+                width: 30vw;
+                background-repeat: no-repeat;
+                margin-left: 29%;
+            }
+            
+            #currentTime{
+                margin: 10%;
+                margin-left: 19%;
+                width: 30%;
+                font-family: RobotoP;
+                font-size: 100%;
+                float: left;
+            }
+            
+            #currentLocation{
+                margin: 10%;
+                margin-left: 60%;
+                width: 50%;
+                height: 20%;
+                font-family: RobotoP;
+                font-size: 100%;
+                /*background-color: aqua;*/
+                
+            }
+            
+            #buttons{
+                width: 50vw;
+                height: 15vh;
+            }
+            
+            #foodDiv{
+                height: 17vh;
+                width: 50vw;
+                border-color: rgb(244, 108, 164);
+                border-style: solid;
+            }
+            
+            #food{
+                height: 10vh;
+                width: 20vw;
+                position: relative;
+                top:0;
+                bottom:0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                padding-left: 15%;
+               
+            }
+            
+            #return{
+                width:20vw;
+                height:30vh;
+                margin-top: 30%;
+                margin-left: 50%;
+            }
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <div id="threeEs"></div>
+        <br><br><br>
+        
+        <div class="regions">
+            <div id="location">
+                <br>
+                <div id="currentTime"></div>
+                <div id="currentLocation"></div>
+                <div id="buttons">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 602">
+    <defs>
+        <style>.cls-1,.cls-13,.cls-15,.cls-17{fill:#fff;}.cls-1,.cls-11{stroke:#f46ca4;stroke-miterlimit:10;stroke-width:0.95px;}.cls-2,.cls-4{font-size:15.2px;}.cls-2,.cls-4,.cls-7{fill:#545454;font-family:Roboto-Regular, Roboto;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:0.01em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:-0.14em;}.cls-7{font-size:16.6px;}.cls-8{letter-spacing:-0.01em;}.cls-9{letter-spacing:0em;}.cls-10{letter-spacing:-0.01em;}.cls-11{fill:none;}.cls-12{fill:#6790f4;}.cls-13,.cls-15,.cls-17{font-size:14.99px;font-family:Roboto-Bold, Roboto;font-weight:700;}.cls-14{letter-spacing:-0.02em;}.cls-15{letter-spacing:-0.07em;}.cls-16{letter-spacing:0em;}.cls-17{letter-spacing:-0.03em;}.cls-18{letter-spacing:0em;}.cls-19{letter-spacing:-0.02em;}.cls-20{letter-spacing:0em;}.cls-21{letter-spacing:-0.01em;}
+        </style>
+    </defs>
+    <title>locaMonth</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="month">
+            <g id="jan">
+                <rect class="cls-1" x="16.98" y="64.15" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(24.58 81.25)">
+                    <tspan class="cls-3">J</tspan>
+                    <tspan x="8.22" y="0">AN</tspan>
+                </text>
+            </g>
+            <g id="feb">
+                <rect class="cls-1" x="68.02" y="63.89" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(78.73 81.25)">FEB</text>
+            </g>
+            <g id="mar">
+                <rect class="cls-1" x="119.06" y="63.63" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-4" transform="translate(124.33 81.25)">M<tspan class="cls-5" x="13.49" y="0">AR</tspan>
+                </text>
+            </g>
+            <g id="may">
+                <rect class="cls-1" x="221.14" y="63.11" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-4" transform="translate(228.83 81.25)">M<tspan class="cls-5" x="13.49" y="0">AY</tspan>
+                </text>
+            </g>
+            <g id="july">
+                <rect class="cls-1" x="323.22" y="62.6" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(329.52 81.25)">JU<tspan class="cls-6" x="18.67" y="0">L</tspan>
+                    <tspan x="24.82" y="0">Y</tspan>
+                </text>
+            </g>
+            <g id="june">
+                <rect class="cls-1" x="272.18" y="62.85" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(275.38 81.25)">JUNE</text>
+            </g>
+            <g id="aug">
+                <rect class="cls-1" x="374.26" y="62.34" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(380.82 81.25)">AUG</text>
+            </g>
+            <g id="sept">
+                <rect class="cls-1" x="425.3" y="62.08" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(430.22 80.3)">SEPT</text>
+            </g>
+            <g id="oct">
+                <rect class="cls-1" x="476.34" y="61.82" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-7" transform="translate(484.37 80.55) scale(0.92 1)">O<tspan class="cls-8" x="11.32" y="0">C</tspan>
+                    <tspan class="cls-9" x="21.6" y="0">T</tspan>
+                </text>
+            </g>
+            <g id="nov">
+                <rect class="cls-1" x="527.38" y="61.56" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(534.72 79.35)">N<tspan class="cls-10" x="10.84" y="0">O</tspan><tspan x="21.04" y="0">V</tspan>
+                </text>
+            </g>
+            <g id="dec">
+                <rect class="cls-1" x="578.42" y="61.3" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(586.02 79.35)">DEC</text>
+            </g>
+            <g id="apr">
+                <rect class="cls-11" x="170.1" y="63.37" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(177.52 81.25)">APR</text>
+            </g>
+        </g>
+        <g id="locationBut">
+            <g id="sBC">
+                <rect class="cls-12" width="121.82" height="50.6"/>
+                <text class="cls-13" transform="translate(14.45 24.4)">SOUTHWEST <tspan x="36.86" y="16.87">BC</tspan></text>
+            </g>
+            <g id="Oka">
+                <rect class="cls-12" x="128.44" width="121.82" height="50.6"/>
+                <text class="cls-13" transform="translate(149.99 30.02)">OKANAGAN</text>
+            </g>
+            <g id="nBC">
+                <rect class="cls-12" x="388.81" width="121.82" height="50.6"/>
+                <text class="cls-13" transform="translate(410.29 24.4)">NO<tspan class="cls-14" x="20.86" y="0">R</tspan><tspan x="30.54" y="0">THERN</tspan>
+                    <tspan x="29.83" y="14.99">BC</tspan>
+                </text>
+            </g>
+            <g id="van">
+                <rect class="cls-12" x="518.18" width="121.82" height="50.6"/>
+                <text class="cls-15" transform="translate(535.64 31.9)">V<tspan class="cls-16" x="8.51" y="0">ANCOUVER</tspan>
+                </text>
+            </g>
+            <g id="koot">
+                <rect class="cls-12" x="258.75" width="121.82" height="50.6"/>
+                <text class="cls-17" transform="translate(280.3 30.02)">K<tspan class="cls-18" x="9.26" y="0">O</tspan>
+                    <tspan class="cls-19" x="19.5" y="0">O</tspan>
+                    <tspan class="cls-20" x="29.52" y="0">TNE</tspan>
+                    <tspan class="cls-21" x="57.3" y="0">Y</tspan>
+                    <tspan class="cls-16" x="66.62" y="0">S</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
+                </div><br><br><br>
+               <div id="foodDiv">
+                   <div id="food"></div>
+                </div>
+            </div>
+            <div id="return">
+                <a href="../levels/levels.html">
+                    <img src="play.png" width="90px;" height="40px;">
+                </a>
+            </div>
+        </div>
+            
+          
+            <script>
+                
+                //MONTH VARIABLES
+                var jan = document.getElementById("jan");
+                var feb = document.getElementById("feb");
+                var mar = document.getElementById("mar");
+                var apr = document.getElementById("apr");
+                var may = document.getElementById("may");
+                var june = document.getElementById("june");
+                var july = document.getElementById("july");
+                var aug = document.getElementById("aug");
+                var sept = document.getElementById("sept");
+                var oct = document.getElementById("oct");
+                var nov = document.getElementById("nov");
+                var dec = document.getElementById("dec");
+                
+                //CITY VARIABLE
+                var sBC = document.getElementById("sBC");
+                var oka = document.getElementById("Oka");
+                var koot = document.getElementById("koot");
+                var nBC = document.getElementById("nBC");
+                var van = document.getElementById("van");
+                
+                //ARRAYS
+                
+                //SouthBC arrays
+                var janSBC = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var febSBC = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var marSBC =["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var aprSBC = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var maySBC = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var juneSBC = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var julySBC = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var augSBC = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var septSBC = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var octSBC = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var novSBC = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var decSBC = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                
+                //Okanagan arrays
+                var janOka = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var febOka = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var marOka =["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var aprOka = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var mayOka = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var juneOka = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var julyOka = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var augOka = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var septOka = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var octOka = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var novOka = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var decOka = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                
+                //Kootney arrays
+                var janKoot = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var febKoot = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var marKoot =["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var aprKoot = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var mayKoot = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var juneKoot = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var julyKoot = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var augKoot = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var septKoot = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var octKoot = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var novKoot = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var decKoot = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                
+                //North BC arrays
+                var janNBC = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var febNBC = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var marNBC =["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var aprNBC = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var mayNBC = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var juneNBC = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var julyNBC = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var augNBC = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var septNBC = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var octNBC = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var novNBC = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var decNBC = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                
+                //Vancouver arrays
+                var janVan = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var febVan = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var marVan =["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var aprVan = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var mayVan = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var juneVan = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var julyVan = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var augVan = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                var septVan = ["flower.png", "berry.png", "carrot.png", "cabbage.png"];
+                var octVan = ["carrot.png", "flower.png", "cabbage.png", "berry.png"];
+                var novVan = ["berry.png", "flower.png", "carrot.png", "cabbage.png"];
+                var decVan = ["cabbage.png", "berry.png", "flower.png", "carrot.png"];
+                
+                //CLICK VAR
+                
+                //months
+                var janClick = false;
+                var febClick = false;
+                var marClick = false;
+                var aprClick = false;
+                var mayClick = false;
+                var juneClick = false;
+                var julyClick = false;
+                var augClick = false;
+                var septClick = false;
+                var octClick = false;
+                var novClick = false;
+                var decClick = false;
+                
+                //cities
+                var vanClick = false;
+                var sBCClick = false;
+                var okaClick = false;
+                var kootClick = false;
+                var nBCClick = false;
+                
+                //food
+                var food = document.getElementById("food");
+                var foodDiv = document.getElementById("foodDiv");
+                
+                
+                //CLICK FUNCTIONS 
+                
+                //months
+                jan.addEventListener("click", function(){
+                    console.log("January");
+                    janClick = true;
+                    
+                    showFood();
+                });
+                
+                feb.addEventListener("click", function(){
+                    console.log("Feb");
+                    febClick = true;
+                    
+                    showFood();
+                });
+                
+                mar.addEventListener("click", function(){
+                    console.log("March");
+                    marClick = true;
+                    
+                    showFood();
+                });
+                
+                apr.addEventListener("click", function(){
+                    console.log("April");
+                    aprClick = true;
+                    
+                    showFood();
+                });
+                
+                may.addEventListener("click", function(){
+                    console.log("May");
+                    mayClick = true;
+                    
+                   showFood();
+                });
+                
+                june.addEventListener("click", function(){
+                    console.log("June");
+                    juneClick = true;
+                    
+                    showFood();
+                });
+                
+                july.addEventListener("click", function(){
+                    console.log("July");
+                    julyClick = true;
+                    
+                    showFood();
+                });
+                
+                aug.addEventListener("click", function(){
+                    console.log("August");
+                    augClick = true;
+                    
+                    showFood();
+                });
+                
+                sept.addEventListener("click", function(){
+                    console.log("September");
+                    septClick = true;
+                    
+                    showFood();
+                });
+                
+                oct.addEventListener("click", function(){
+                    console.log("October");
+                    octClick = true;
+                    
+                    showFood();
+                });
+                
+                nov.addEventListener("click", function(){
+                    console.log("November");
+                    novClick = true;
+                    
+                    showFood();
+                })
+                
+                dec.addEventListener("click", function(){
+                    console.log("December");
+                    decClick = true;
+                    
+                    showFood();
+                })
+                
+                
+                //cities
+                 sBC.addEventListener("click", function(){
+                    console.log("South BC");
+                    sBCClick = true;
+                    
+                    food.innerHTML = "";
+                    
+                    showFood();
+                });
+                
+                oka.addEventListener("click", function(){
+                    console.log("Okanagan");
+                    okaClick = true;
+                    
+                    food.innerHTML="";
+                    
+                    showFood();
+                });
+                
+                koot.addEventListener("click", function(){
+                    console.log("Kootneys");
+                    kootClick = true;
+                    
+                    food.innerHTML="";
+                    
+                    showFood();
+                })
+                
+                nBC.addEventListener("click", function(){
+                    console.log("North BC");
+                    nBCClick = true;
+                    
+                    food.innerHTML=""
+                    
+                    showFood();
+                })
+                
+                van.addEventListener("click", function(){
+                    console.log("Vancouver");
+                    vanClick = true;
+                    
+                    food.innerHTML = "";
+                    
+                    showFood();
+                    
+                });
+                
+               
+                
+                
+                
+                //FUNCTIONS
+                function showFood(){
+                    
+                    //southBC
+                    if(sBCClick && janClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = janSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        janClick = false;
+                    };
+                    
+                    if(sBCClick && febClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = febSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        febClick = false;
+                    };
+                    
+                      if(sBCClick && marClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = marSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        marClick = false;
+                    };
+                    
+                      if(sBCClick && aprClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = aprSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        aprClick = false;
+                    };
+                    
+                      if(sBCClick && mayClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = maySBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        mayClick = false;
+                    };
+                    
+                      if(sBCClick && juneClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = juneSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        juneClick = false;
+                    };
+                    
+                      if(sBCClick && julyClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = julySBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        julyClick = false;
+                    };
+                    
+                      if(sBCClick && augClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = augSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        augClick = false;
+                    };
+                    
+                      if(sBCClick && septClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = septSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        septClick = false;
+                    };
+                    
+                      if(sBCClick && octClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = octSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        octClick = false;
+                    };
+                    
+                      if(sBCClick && novClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = novSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        novClick = false;
+                    };
+                    
+                      if(sBCClick && decClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = decSBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        sBCClick = false;
+                        decClick = false;
+                    };
+
+                    //Okanagan
+                    if(okaClick && janClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = janOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        janClick = false;
+                    };
+                    
+                    if(okaClick && febClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = febOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        febClick = false;
+                    };
+                    
+                    if(okaClick && marClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = marOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        marClick = false;
+                    };
+                    
+                    if(okaClick && aprClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = aprOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        aprClick = false;
+                    };
+                    
+                    if(okaClick && mayClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = mayOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        mayClick = false;
+                    };
+                    
+                    if(okaClick && juneClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = julyOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        juneClick = false;
+                    };
+                    
+                    if(okaClick && julyClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = julyOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        julyClick = false;
+                    };
+                    
+                    if(okaClick && augClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = augOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        augClick = false;
+                    };
+                    
+                    if(okaClick && septClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = septOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        septClick = false;
+                    };
+                    
+                    if(okaClick && octClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = octOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        octClick = false;
+                    };
+                    
+                    if(okaClick && novClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = novOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        novClick = false;
+                    };
+                    
+                    if(okaClick && decClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = decOka[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        okaClick = false;
+                        decClick = false;
+                    };
+                    
+                    //Kootneys
+                    if(kootClick && janClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = janKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        janClick = false;
+                    };
+                    
+                    if(kootClick && febClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = febKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        febClick = false;
+                    };
+                    
+                    if(kootClick && marClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = marKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        marClick = false;
+                    };
+                    
+                    if(kootClick && aprClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = aprKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        aprClick = false;
+                    };
+                    
+                    if(kootClick && mayClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = mayKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        mayClick = false;
+                    };
+                    
+                    if(kootClick && juneClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = juneKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        juneClick = false;
+                    };
+                    
+                    if(kootClick && julyClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = julyKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        julyClick = false;
+                    };
+                    
+                    if(kootClick && augClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = augKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        augClick = false;
+                    };
+                    
+                    if(kootClick && septClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = septKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        septClick = false;
+                    };
+                    
+                    if(kootClick && octClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = octKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        octClick = false;
+                    };
+                    
+                    if(kootClick && novClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = novKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        novClick = false;
+                    };
+                    
+                    if(kootClick && decClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = decKoot[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        kootClick = false;
+                        decClick = false;
+                    };
+                    
+                    //North BC
+                    if(nBCClick && janClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = janNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        janClick = false;
+                    };
+                    
+                    if(nBCClick && febClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = febNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        febClick = false;
+                    };
+                    
+                    if(nBCClick && marClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = marNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        marClick = false;
+                    };
+                    
+                    if(nBCClick && aprClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = aprNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        aprClick = false;
+                    };
+                    
+                    if(nBCClick && mayClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = mayNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        mayClick = false;
+                    };
+                    
+                    if(nBCClick && juneClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = juneNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        juneClick = false;
+                    };
+                    
+                    if(nBCClick && julyClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = julyNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        julyClick = false;
+                    };
+                    
+                    if(nBCClick && augClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = augNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        augClick = false;
+                    };
+                    
+                    if(nBCClick && septClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = septNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        septClick = false;
+                    };
+                    
+                    if(nBCClick && octClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = octNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        octClick = false;
+                    };
+                    
+                    if(nBCClick && novClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = novNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        novClick = false;
+                    };
+                    
+                    if(nBCClick && decClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = decNBC[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        nBCClick = false;
+                        decClick = false;
+                    };
+                    
+                    //vancouver
+                    if(vanClick && janClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = janVan[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        vanClick = false;
+                        janClick = false;
+                    };
+                    
+                    if(vanClick && febClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = febVan[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        vanClick = false;
+                        febClick = false;
+                    };
+                    
+                    if(vanClick && marClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = marVan[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        vanClick = false;
+                        marClick = false;
+                    };
+                    
+                    if(vanClick && aprClick === true){ 
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = aprVan[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        vanClick = false;
+                        aprClick = false;
+                    };
+                    
+                    if(vanClick && mayClick === true){
+                       for (var i = 0; i < 4; i++){
+                           var nImg = document.createElement("img");
+                           nImg.src = mayVan[i];
+                           food.appendChild(nImg);
+                       } ;
+                        
+                        vanClick = false;
+                        mayClick = false;
+                    };
+                    
+                    if(vanClick && juneClick === true){
+                        for(var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = juneVan[i];
+                            food.appendChild(nImg);
+                        }
+                        
+                        vanClick = false;
+                        juneClick = false;
+                    };
+                    
+                    if(vanClick && julyClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = julyVan[i];
+                            food.appendChild(nImg)
+                        }
+                        
+                        vanClick = false;
+                        julyClick = false;
+                    };
+                    
+                    if(vanClick && augClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = augVan[i];
+                            food.appendChild(nImg)
+                        }
+                        
+                        vanClick = false;
+                        augClick = false;
+                    };
+                    
+                    if(vanClick && septClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = septVan[i];
+                            food.appendChild(nImg)
+                        }
+                        
+                        vanClick = false;
+                        septClick = false;
+                    };
+                    
+                    if(vanClick && octClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = octVan[i];
+                            food.appendChild(nImg)
+                        }
+                        
+                        vanClick = false;
+                        octClick = false;
+                    };
+                    
+                    if(vanClick && novClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = novVan[i];
+                            food.appendChild(nImg)
+                        }
+                        
+                        vanClick = false;
+                        novClick = false;
+                    };
+                    
+                    if(vanClick && decClick === true){
+                        for (var i = 0; i < 4; i++){
+                            var nImg = document.createElement("img");
+                            nImg.src = decVan[i];
+                            food.appendChild(nImg)
+                        }
+                        
+                        vanClick = false;
+                        decClick = false;
+                    }
+                    
+                };
+                
+                /*
+                
+                function vanApr(){
+                    
+                    if(vanClick && aprClick === true){
+                        var nImg = document.createElement("img");
+                        nImg.src = "Codes/food.svg";
+                        food.appendChild(nImg);
+                    }   
+                }
+                */
+                
+                
+                  var currentTime = document.getElementById("currentTime");
+                var currentLocation = document.getElementById("currentLocation");
+                
+                var seconds = Date();
+                currentTime.innerHTML = seconds;
+                
+                
+            
+            </script>
+            
+        
+    </body>
+</html>

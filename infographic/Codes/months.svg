@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 30">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;}.cls-1,.cls-8{stroke:#f46ca4;stroke-miterlimit:10;}.cls-2{font-size:16px;}.cls-2,.cls-6{fill:#545454;font-family:Roboto-Regular, Roboto;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:0.01em;}.cls-5{letter-spacing:-0.14em;}.cls-6{font-size:17.48px;}.cls-7{letter-spacing:-0.01em;}.cls-8{fill:none;}
+        </style>
+    </defs>
+    <title>months</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="month">
+            <g id="jan">
+                <rect class="cls-1" x="0.5" y="3.5" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(8.5 21.5)">
+                    <tspan class="cls-3">J</tspan>
+                    <tspan x="8.66" y="0">AN</tspan>
+                </text>
+            </g>
+            <g id="feb">
+                <rect class="cls-1" x="54.23" y="3.23" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(65.5 21.5)">FEB</text>
+            </g>
+            <g id="mar">
+                <rect class="cls-1" x="107.95" y="2.95" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(113.5 21.5)">
+                    <tspan class="cls-4">M</tspan>
+                    <tspan x="14.2" y="0">AR</tspan>
+                </text>
+            </g>
+            <g id="may">
+                <rect class="cls-1" x="215.41" y="2.41" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(223.5 21.5)">
+                    <tspan class="cls-4">M</tspan>
+                    <tspan x="14.2" y="0">AY</tspan>
+                </text>
+            </g>
+            <g id="july">
+                <rect class="cls-1" x="322.86" y="1.86" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(329.5 21.5)">JU<tspan class="cls-5" x="19.66" y="0">L</tspan><tspan x="26.13" y="0">Y</tspan>
+                </text>
+            </g><
+            g id="june"><rect class="cls-1" x="269.14" y="2.14" width="48" height="26" rx="12" ry="12"/><text class="cls-2" transform="translate(272.5 21.5)">JUNE</text>
+            </g>
+            <g id="aug">
+                <rect class="cls-1" x="376.59" y="1.59" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(383.5 21.5)">AUG</text>
+            </g>
+            <g id="sept">
+                <rect class="cls-1" x="430.32" y="1.32" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(435.5 20.5)">SEPT</text>
+            </g>
+            <g id="oct">
+                <rect class="cls-1" x="484.05" y="1.05" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-6" transform="translate(492.5 20.76) scale(0.92 1)">O<tspan class="cls-7" x="11.91" y="0">C</tspan><tspan x="22.73" y="0">T</tspan>
+                </text>
+            </g>
+            <g id="nov">
+                <rect class="cls-1" x="537.77" y="0.77" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(545.5 19.5)">N<tspan class="cls-3" x="11.41" y="0">O</tspan><tspan x="22.15" y="0">V</tspan>
+                </text>
+            </g>
+            <g id="dec">
+                <rect class="cls-1" x="591.5" y="0.5" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(599.5 19.5)">DEC</text>
+            </g>
+            <g id="apr">
+                <rect class="cls-8" x="161.68" y="2.68" width="48" height="26" rx="12" ry="12"/>
+                <text class="cls-2" transform="translate(169.5 21.5)">APR</text>
+            </g>
+        </g>
+    </g>
+</svg>

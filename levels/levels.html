@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto');
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            #levels{
+                width: 95vw;
+                height: 95vh;
+                font-family: 'Roboto', sans-serif;
+                
+            }
+            
+            #name{
+                height: 20%;
+            }
+            
+            #level1{
+                height: 30%;
+                margin-left: 25%;
+            }
+            
+             #level2{
+                height: 30%;
+            }
+            
+             #level3{
+                    height: 30%;
+                 margin-left: 25%;
+                }
+            
+             #level4{
+                    height: 30%;
+                }
+            
+            #stuff{
+                height: 5%;
+                margin-left: 30%;
+                margin-top: 50px;
+                float: right;
+            }
+            
+            .images{
+                position: relative;
+                margin: auto;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+            }
+            
+            
+            
+            
+            @media (min-width: 380px) and (max-width: 400px){
+                #levels{
+                    
+                }
+                
+                #name{
+                    height: 8%;
+                }
+                
+                #level1{
+                    height: 17%;
+                    margin-left: 0;
+                    margin-left: 2%;
+                }
+                
+                #level2{
+                    height: 17%;
+                    margin-left: 2%;
+                }
+                
+                 #level3{
+                     height: 17%;
+                     margin-left: 2%;
+                     
+                }
+                  #level4{
+                    height: 17%;
+                    
+                }
+                
+                #levelFour{
+                    height: 17%;
+                    width: 5%;
+                }
+                
+                #stuff{
+                    height: 3%;
+                    float: left;
+                    margin-left: 25%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="levels">
+            <img id="name" src="name.svg" />
+            <img id="stuff" src="stuff.svg" />
+            <br>
+            <a href="../html/index.html">
+                <img class="images" id="level1" src="level1.svg" />
+            </a>
+            <img class="images" id="level2" src="level2.svg" />
+            <br>
+            <img class="images" id="level3" src="level3.svg" />
+            <img class="images" id="level4" src="level4.svg" />
+           
+        </div>
+    </body>
+</html>

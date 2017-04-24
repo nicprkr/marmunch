@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.77 64.9">
+    <defs>
+        <style>
+            .cls-1{fill:#83d0f2;stroke:#83d0f2;stroke-miterlimit:10;stroke-width:0.56px;}.cls-2{font-size:40.97px;fill:#f9f9f7;font-family:Roboto-Regular, Roboto;}.cls-3{letter-spacing:0.01em;}
+        </style>
+    </defs>
+    <title>play.svg</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Play">
+            <rect class="cls-1" x="0.28" y="0.28" width="171.21" height="64.34" rx="16.17" ry="16.17"/>
+            <text class="cls-2" transform="translate(34.35 44.29)">P<tspan class="cls-3" x="26.25" y="0">L</tspan>
+                <tspan x="48.75" y="0">AY</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
