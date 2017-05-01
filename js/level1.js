@@ -1,43 +1,8 @@
-<!doctype html>
-<html>
-<head>
-  <title>Marmunch Test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+/************************   LEVEL ONE **************************/
 
-body {
-  margin: 0;
-    font-family: 'Roboto', sans-serif;
-  }
-            
-#name{
-                height: 10%;
-    width: 20%;
-            }
+//stuff to add: pause button, death animation, more/different foods, save high score, change character, timer, jump animation
 
-      #game-area {
-          margin: auto;
-          left:0;
-          right:0;
-          top:0;
-          bottom: 0;
-          position:absolute;
-          padding: 5px;
-          height: 605px;
-          width: 805px;
-      }
-    </style>
-</head>
-
-<body>
-    <img id="name" src="name.svg" />
-    
-    <div id='game-area'></div>
-    
-    <script src="../js/phaser.js" type="text/javascript"></script>
-    <script>
-    var game = new Phaser.Game(800, 600, Phaser.AUTO, "game-area", { preload: preload, create: create, update: update });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, "game-area", { preload: preload, create: create, update: update });
 
 function preload() {
 
@@ -48,88 +13,68 @@ function preload() {
     game.load.image('l-ground', '../assets/long.png');
     game.load.image('tree', '../assets/tree.png');
     game.load.image('star', '../assets/star.png');
-    game.load.image('poison', '../assets/poison2.png');
+    game.load.image('poison', '../assets/poison.png');
     game.load.image('grassyhill', '../assets/grassyhill.png');
     game.load.image('sun', '../assets/sun2.png');
     game.load.image('waterfall', '../assets/waterfall.png');
     game.load.image('mountains', '../assets/mountains.png');
     game.load.image('mountain', '../assets/mountain.png');
     game.load.image('trophy', '../assets/trophy.png');
-    game.load.spritesheet('dude', '../assets/dude.png', 92, 48, 7);
-
+    game.load.spritesheet('dude', '../assets/dude.png', 92, 48, 8);
+    game.load.spritesheet('jump1', '../assets/jump.png', 1);
 }
 
-var player;
-var platforms;
-var cursors;
+// **************   VARIABLES
 
-var stars;
-var background;
-var score = 0;
-var scoreText;
-        var winText;
-
-var trees;
-var WATER;
-        
-var trophy;
-        
-var poisons;
+var player,
+    platforms,
+    cursors,
+    space,
+    stars,
+    background,
+    score = 0,
+    scoreText,
+    winText,
+    trees,
+    WATER,
+    trophy,
+    dead,
+    poisons;
 
 function create() {
 
-    //  We're going to be using physics, so enable the Arcade Physics system
+    //  enables physics
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
-    //  A simple background for our game
+    // background
         game.add.sprite(0, 0, 'sky');
     game.world.setBounds(0, 0, 4200, 600);
-
-    
     background = game.add.group();
     background.create(60,60,'sun');
     background.create(210,330,'waterfall');
     background.create(-210,120,'mountain');
     background.create(400,120,'mountain');
     background.fixedToCamera = true;
-    
-    
     game.add.sprite(0,480,'grassyhill');
         trees = game.add.group();
-    for (var i = 0; i < 42; i++)
-    {
-        //  Create a star inside of the 'stars' group
+    for (var i = 0; i < 42; i++) {
         var tree = trees.create(i * Math.floor((Math.random() * 300)+1), 400, 'tree');
     }
     
     WATER = game.add.group();
     WATER.enableBody = true;
-    
-var water = WATER.create(460,game.world.height - 10, 'water');
-    water.body.immovable = true;
-    water = WATER.create(1090,game.world.height - 10, 'water');
-    water.body.immovable = true;
-    water = WATER.create(1720,game.world.height - 10, 'water');
-    water.body.immovable = true;
-    water = WATER.create(2350,game.world.height - 10, 'water');
-    water.body.immovable = true;
-        water = WATER.create(2980,game.world.height - 10, 'water');
-    water.body.immovable = true;
-            water = WATER.create(3610,game.world.height - 10, 'water');
-    water.body.immovable = true;
-    
-    //  The platforms group contains the ground and the 2 ledges we can jump on
+    for (var i=0; i < 9; i++){
+        var x = 460;
+        var water = WATER.create((x * i), game.world.height - 10, 'water');
+        water.body.immovable = true;
+    }
+
+    //makes all platforms
     platforms = game.add.group();
-
-    //  We will enable physics for any object that is created in this group
     platforms.enableBody = true;
-
-    // Here we create the ground.
     var ground = platforms.create(0, game.world.height - 24, 'l-ground');
     ground.scale.setTo(1,1);
     ground.body.immovable = true;
-
-    //  Now let's create two ledges
     var ledge = platforms.create(400, 400, 's-ground');
     ledge.body.immovable = true;
 
@@ -151,7 +96,7 @@ var water = WATER.create(460,game.world.height - 10, 'water');
     ledge = platforms.create(2550, 288, 'l-ground');
     ledge.body.immovable = true;
 
-        ledge = platforms.create(2950, 138, 'm-ground');
+        ledge = platforms.create(3000, 188, 'm-ground');
     ledge.body.immovable = true;
     
             ledge = platforms.create(3550, game.world.height - 24, 'm-ground');
@@ -162,66 +107,42 @@ var water = WATER.create(460,game.world.height - 10, 'water');
     trophy.enableBody = true;
     trophy.scale.setTo(0.3,0.3);
     
-    // The player and its settings
+    // player settings
     player = game.add.sprite(92, game.world.height - 150, 'dude');
-
-    //  We need to enable physics on the player
     game.physics.arcade.enable(player);
-
-    //  Player physics properties. Give the little guy a slight bounce.
     player.body.bounce.y = 0.2;
-    player.body.gravity.y = 300;
+    player.body.gravity.y = 500;
     player.body.collideWorldBounds = true;
 
-    //  Our two animations, walking left and right.
-    player.animations.add('left', [0, 1, 2, 3], 3, true);
-    player.animations.add('right', [4, 5, 6, 7], 7, true);
+    player.animations.add('left', [0, 1, 2, 3], 10, true);
+    player.animations.add('right', [4, 5, 6, 7], 10, true);
+    player.animations.add('jump', [0, 1], 1, true);
     
-    /*var berry = game.add.group();
-    berry.enableBody = true;
-    for (var i = 0; i < 8; i++){
-        var berry = berry.create(i * 70, 300, 'berry');
-        berry.body.gravity.y = 300;
-    }*/
-
-    //  Finally some stars to collect
+    //  rewards
     stars = game.add.group();
-
-    //  We will enable physics for any star that is created in this group
     stars.enableBody = true;
-
-    //  Here we'll create 12 of them evenly spaced apart
-    for (var i = 0; i < 42; i++)
-    {
-        //  Create a star inside of the 'stars' group
+    for (var i = 0; i < 42; i++){
         var star = stars.create(i * 240, 0, 'star');
-
-        //  Let gravity do its thing
         star.body.gravity.y = 600;
-
-        //  This just gives each star a slightly random bounce value
         star.body.bounce.y = 0.3 + Math.random() * 0.2;
     }
     var star = stars.create(i * 70, 0, 'star');
+    star.body.gravity.y = 300;
 
-        //  Let gravity do its thing
-        star.body.gravity.y = 300;
-
-
-    //  The score
-    scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    //  score
+    scoreText = game.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
     scoreText.fixedToCamera = true;
 
-    //  Our controls.
+    //  controls
     cursors = game.input.keyboard.createCursorKeys();
-    
-        game.camera.follow(player);
+    space = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+    game.camera.follow(player);
     
     //poison
     poisons = game.add.group();
     poisons.enableBody = true;
     
-    for (var i = 0; i < 5; i++){
+    for (var i = 0; i < 3; i++){
         var poison = poisons.create(i * 1000, 0, 'poison');
         poison.body.gravity.y = 600;
         poison.body.bounce.y = 0.1 + Math.random() * 0.1;
@@ -251,48 +172,36 @@ function update() {
     //  Reset the players velocity (movement)
     player.body.velocity.x = 0;
 
-    if (cursors.left.isDown)
-    {
-        //  Move to the left
+    if (cursors.left.isDown) {
         player.body.velocity.x = -300;
-
         player.animations.play('left');
-    }
-    else if (cursors.right.isDown)
-    {
-        //  Move to the right
+    } else if (cursors.right.isDown){
         player.body.velocity.x = 300;
-
         player.animations.play('right');
-    }
-    else
-    {
-        //  Stand still
+    } else{
         player.animations.stop();
-
         player.frame = 4;
     }
     
-    //  Allow the player to jump if they are touching the ground.
-    if (cursors.up.isDown && player.body.touching.down)
-    {
-        player.body.velocity.y = -325;
+
+    if (cursors.up.isDown && player.body.touching.down || space.isDown && player.body.touching.down){
+        player.body.velocity.y = -450;
+        player.animations.play('jump');
+    //jump u chubby thing!!! not working
     }
 
 }
 
 function collectStar (player, star) {
     
-    // Removes the star from the screen
     star.kill();
-
-    //  Add and update the score
     score += 10;
     scoreText.text = 'Score: ' + score;
 
 }
         
         function restart (player, water){
+            player.kill();
             score = 0;
             game.state.restart();
             
@@ -314,7 +223,3 @@ function poisonDie (player, poison){
     
     
     
-    </script>
-</body>
-
-</html>
