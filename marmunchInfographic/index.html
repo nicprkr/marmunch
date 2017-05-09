@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+         
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        
+        <style>
+            
+            @font-face {
+                font-family: RobotoP;
+                src: url(Fonts/Roboto-Regular.ttf);
+            }
+            
+            h3{
+                margin-top: 30%;
+            }
+            
+            #map{
+                margin-top: 2%;
+            }
+            
+            #current{
+                background-image: url(Codes/current.svg);
+                background-repeat: no-repeat;
+                margin-left: 40%;
+                width: 30vw;
+            }
+            
+            #threeEs{
+                background-image: url(Codes/div1.svg);
+                height:100vh;
+                width: 100vw;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            #location{
+                background-image: url(Codes/major.svg);
+                height: 15vh;
+                width: 30vw;
+                background-repeat: no-repeat;
+                margin-left: 29%;
+            }
+            
+            #currentTime{
+                margin: 5%;
+                margin-left: 0;
+                width: 30%;
+                font-family: RobotoP;
+                font-size: 1.1vw;
+                float: left;
+            }
+            
+            #currentLocation{
+                margin: 5%;
+                margin-left: 54%;
+                width: 50%;
+                height: 20%;
+                font-family: RobotoP;
+                font-size: 1.1vw;
+                /*background-color: aqua;*/
+                
+            }
+            
+            #buttons{
+                width: 50vw;
+                height: 15vh;
+            }
+            
+            #foodDiv{
+                height: 17vh;
+                width: 50vw;
+                border-color: rgb(244, 108, 164);
+                border-style: solid;
+            }
+            
+            #food{
+                height: 10vh;
+                width: 20vw;
+                position: relative;
+                top:0;
+                bottom:0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                padding-left: 15%;
+               
+            }
+            
+            #return{
+                width:20vw;
+                height:30vh;
+                margin-top: 10%;
+                margin-left: 50%;
+            }
+            
+            #apr{
+                fill: "#DD287A";
+            }
+            
+            /*MONTHS BUTTON HOVER CSS*/
+            
+            #jan:hover{
+                opacity: 0.6;
+            }
+            
+            #feb:hover{
+                opacity: 0.6;
+            }
+            
+            #mar:hover{
+                opacity: 0.6;
+            }
+            
+            #apr:hover{
+                opacity: 0.6;
+            }
+            
+            #may:hover{
+                opacity: 0.6;
+            }
+            
+            #june:hover{
+                opacity: 0.6;
+            }
+            
+            #july:hover{
+                opacity: 0.6;
+            }
+            
+            #aug:hover{
+                opacity: 0.6;
+            }
+            
+            #sept:hover{
+                opacity: 0.6;
+            }
+            
+            #oct:hover{
+                opacity: 0.6;
+            }
+            
+            #nov:hover{
+                opacity: 0.6;
+            }
+            
+            #dec:hover{
+                opacity: 0.6;
+            }
+            
+            /*CITIES BUTTON HOVER CSS*/
+            
+            #sBC:hover{
+                opacity: 0.6;
+            }
+            
+            #Oka:hover{
+                opacity: 0.6;
+            }
+            
+            #koot:hover{
+                opacity: 0.6;
+            }
+            
+            #nBC:hover{
+                opacity: 0.6;
+            }
+            
+            #van:hover{
+                opacity: 0.6;
+            }
+            #map {
+                width: 100%;
+                height: 400px;
+                background-color: grey;
+            }
+            
+            @media (min-width: 380px) and (max-width: 400px){
+                #threeEs{
+                    height:100vh;
+                    width: 90vw;
+                    background-repeat: no-repeat;
+                    background-position: center; 
+                    margin-top: -35%;
+                }
+                
+                #regions{
+                  
+                }
+                
+               #location{
+                    background-image: url(Codes/location.svg);
+                    height: 45vh;
+                    width: 60vw;
+                    background-repeat: no-repeat;
+                    margin-left: 20%;
+                    font-size: 2vw;
+                    margin-top: -50%;
+                }
+            
+                #currentTime{
+                    margin: 10%;
+                    margin-left: 19%;
+                    width: 30%;
+                    font-family: RobotoP;
+                    font-size: 2vw;
+                    float: left;
+                    
+                }
+            }
+           
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <div id="threeEs"></div>
+        <br><br><br>
+        
+        <div class="regions">
+            <div id="location">
+                <br><br><br><br><br><br>
+                <div id="buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 602">
+                      <defs>
+                        <style>
+                            .cls-1,.cls-13,.cls-15,.cls-17{fill:#fff;}.cls-1,.cls-11{stroke:#f46ca4;stroke-miterlimit:10;stroke-width:0.95px;}.cls-2,.cls-4{font-size:15.2px;}.cls-2,.cls-4,.cls-7{fill:#545454;font-family:Roboto-Regular, Roboto;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:0.01em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:-0.14em;}.cls-7{font-size:16.6px;}.cls-8{letter-spacing:-0.01em;}.cls-9{letter-spacing:0em;}.cls-10{letter-spacing:-0.01em;}.cls-11{fill:none;}.cls-12{fill:#6790f4;}.cls-13,.cls-15,.cls-17{font-size:14.99px;font-family:Roboto-Bold, Roboto;font-weight:700;}.cls-14{letter-spacing:-0.02em;}.cls-15{letter-spacing:-0.07em;}.cls-16{letter-spacing:0em;}.cls-17{letter-spacing:-0.03em;}.cls-18{letter-spacing:0em;}.cls-19{letter-spacing:-0.02em;}.cls-20{letter-spacing:0em;}.cls-21{letter-spacing:-0.01em;}
+                        </style>
+                </defs>
+                <title>locaMonth</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="month">
+            <g id="jan">
+                <rect class="cls-1" x="16.98" y="64.15" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(24.58 81.25)">
+                    <tspan class="cls-3">J</tspan>
+                    <tspan x="8.22" y="0">AN</tspan>
+                </text>
+            </g>
+            <g id="feb">
+                <rect class="cls-1" x="68.02" y="63.89" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(78.73 81.25)">FEB</text>
+            </g>
+            <g id="mar">
+                <rect class="cls-1" x="119.06" y="63.63" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-4" transform="translate(124.33 81.25)">M<tspan class="cls-5" x="13.49" y="0">AR</tspan>
+                </text>
+            </g>
+            <g id="may">
+                <rect class="cls-1" x="221.14" y="63.11" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-4" transform="translate(228.83 81.25)">M<tspan class="cls-5" x="13.49" y="0">AY</tspan>
+                </text>
+            </g>
+            <g id="july">
+                <rect class="cls-1" x="323.22" y="62.6" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(329.52 81.25)">JU<tspan class="cls-6" x="18.67" y="0">L</tspan>
+                    <tspan x="24.82" y="0">Y</tspan>
+                </text>
+            </g>
+            <g id="june">
+                <rect class="cls-1" x="272.18" y="62.85" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(275.38 81.25)">JUNE</text>
+            </g>
+            <g id="aug">
+                <rect class="cls-1" x="374.26" y="62.34" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(380.82 81.25)">AUG</text>
+            </g>
+            <g id="sept">
+                <rect class="cls-1" x="425.3" y="62.08" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(430.22 80.3)">SEPT</text>
+            </g>
+            <g id="oct">
+                <rect class="cls-1" x="476.34" y="61.82" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-7" transform="translate(484.37 80.55) scale(0.92 1)">O<tspan class="cls-8" x="11.32" y="0">C</tspan>
+                    <tspan class="cls-9" x="21.6" y="0">T</tspan>
+                </text>
+            </g>
+            <g id="nov">
+                <rect class="cls-1" x="527.38" y="61.56" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(534.72 79.35)">N<tspan class="cls-10" x="10.84" y="0">O</tspan><tspan x="21.04" y="0">V</tspan>
+                </text>
+            </g>
+            <g id="dec">
+                <rect class="cls-1" x="578.42" y="61.3" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(586.02 79.35)">DEC</text>
+            </g>
+            <g id="apr">
+                <rect class="cls-11" x="170.1" y="63.37" width="45.6" height="24.7" rx="11.4" ry="11.4"/>
+                <text class="cls-2" transform="translate(177.52 81.25)">APR</text>
+            </g>
+        </g>
+        <g id="locationBut">
+            <g id="sBC">
+                <rect class="cls-12" width="121.82" height="50.6"/>
+                <text class="cls-13" transform="translate(14.45 24.4)">SOUTHWEST <tspan x="36.86" y="16.87">BC</tspan></text>
+            </g>
+            <g id="Oka">
+                <rect class="cls-12" x="128.44" width="121.82" height="50.6"/>
+                <text class="cls-13" transform="translate(149.99 30.02)">OKANAGAN</text>
+            </g>
+            <g id="nBC">
+                <rect class="cls-12" x="388.81" width="121.82" height="50.6"/>
+                <text class="cls-13" transform="translate(410.29 24.4)">NO<tspan class="cls-14" x="20.86" y="0">R</tspan><tspan x="30.54" y="0">THERN</tspan>
+                    <tspan x="29.83" y="14.99">BC</tspan>
+                </text>
+            </g>
+            <g id="van">
+                <rect class="cls-12" x="518.18" width="121.82" height="50.6"/>
+                <text class="cls-15" transform="translate(535.64 31.9)">V<tspan class="cls-16" x="8.51" y="0">ANCOUVER</tspan>
+                </text>
+            </g>
+            <g id="koot">
+                <rect class="cls-12" x="258.75" width="121.82" height="50.6"/>
+                <text class="cls-17" transform="translate(280.3 30.02)">K<tspan class="cls-18" x="9.26" y="0">O</tspan>
+                    <tspan class="cls-19" x="19.5" y="0">O</tspan>
+                    <tspan class="cls-20" x="29.52" y="0">TNE</tspan>
+                    <tspan class="cls-21" x="57.3" y="0">Y</tspan>
+                    <tspan class="cls-16" x="66.62" y="0">S</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
+                </div><br><br><br>
+               <div id="foodDiv">
+                   <div id="food"></div>
+                </div>
+                 <div id="current">
+                    <div id="currentTime"></div>
+                    <div id="currentLocation"><br>Enter Location</div>
+                </div>
+            </div>
+        </div>
+
+            <script src="infographic.js"></script>
+        <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBghlje94gTNZC-2Te1Dezep36HQMoWWWc&libraries=places&callback=initMap">
+    </script>
+        
+        <div id="return">
+                <a href="../levels/levels.html">
+                    <img src="play.png" width="90px;" height="40px;">
+                </a>
+            </div>
+        
+        
+    </body>
+    
+    
+</html>
